@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://viewsgrowth.com/sitemap.xml
+
+# Directories
+Allow: /css/
+Allow: /images/
+Allow: /downloads/
+
+# Specific files
+Allow: /downloads/complete-guide.pdf
+
+# No restrictions - we want all pages indexed
