@@ -225,14 +225,45 @@ footer a {
     --font-size-xl: 1.5rem;
   }
   
-  nav a {
-    display: block;
-    margin: 0.25rem 0;
-  }
-  
+  /* Grid responsive */
   .grid {
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
+  }
+  
+  /* Navigation - horizontal scroll on mobile */
+  nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+  }
+  
+  nav .container {
+    display: flex;
+    overflow-x: auto;
+    padding: 0 10px;
+    scroll-snap-type: x mandatory;
+  }
+  
+  nav a {
+    display: inline-block;
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 0.5rem 0.8rem;
+    margin: 0 0.2rem;
+    min-height: 44px;
+    scroll-snap-align: start;
+  }
+  
+  /* Visual scroll indicator */
+  nav::after {
+    content: '→';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.5;
+    pointer-events: none;
   }
 }
 
