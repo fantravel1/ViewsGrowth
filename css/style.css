@@ -146,6 +146,27 @@ footer a {
     text-decoration: underline;
 }
 
+/* Fix centering for stats section */
+.stats .grid {
+    justify-items: center;
+    text-align: center;
+}
+
+.stats .grid > div {
+    text-align: center;
+    width: 100%;
+}
+
+/* Ensure hero is centered */
+.hero .container {
+    text-align: center;
+}
+
+/* Center navigation */
+nav .container {
+    text-align: center;
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
     nav a {
